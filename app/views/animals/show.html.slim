@@ -1,0 +1,32 @@
+h4 Animal
+
+p = "id is #{@animal.id}"
+p = "name #{@animal.animal_name}"
+
+= link_to 'index', animals_path
+
+table
+    tr
+      th Id
+      th Date
+      th latitude
+      th longitude
+      th region
+    - @animal.sightings.each do |sighting|
+        tr
+          td
+            = sighting.id
+          td
+            = sighting.date
+          td
+            = sighting.latitude
+          td
+            = sighting.longitude
+          td
+            = sighting.region
+          td
+            = link_to 'Add', new_animal_sighting_path(@animal, sighting)
+          td
+            = link_to 'Edit', edit_animal_sighting_path(@animal, sighting)
+          td
+            = link_to 'Delete',animal_sighting_path(@animal, sighting), method: :delete, data: {confirm: 'are yuh sure ?'}

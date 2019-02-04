@@ -1,0 +1,22 @@
+h3 Animals list
+
+= link_to 'new', new_animal_path
+
+table
+    tr
+      th id
+      th name
+      - @animals.each do |animal|
+        tr
+            td
+              = animal.id
+            td
+              = animal.animal_name
+            td
+              = link_to 'Show', animal_path(animal)
+            td
+              = link_to 'Edit', edit_animal_path(animal)
+            td
+              = link_to 'Add', new_animal_sighting_path(animal)
+            td
+              = link_to 'Delete', animal_path(animal), method: :delete, data: {confirm: 'Are yuh sure, yuh want to delete ?'}

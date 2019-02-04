@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-02-04
+  latitude: 1.5
+  longitude: 1.5
+  animal: one
+
+two:
+  date: 2019-02-04
+  latitude: 1.5
+  longitude: 1.5
+  animal: two
