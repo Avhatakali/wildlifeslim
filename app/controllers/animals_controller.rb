@@ -18,7 +18,6 @@ class AnimalsController < ApplicationController
 
     def create
         @animal = Animal.create(animal_params)
-
         if @animal.save
             redirect_to animals_path
         else
